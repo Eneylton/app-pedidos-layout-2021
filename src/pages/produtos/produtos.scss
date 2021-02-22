@@ -1,0 +1,48 @@
+page-produtos {
+
+    
+    
+    ion-badge{
+        margin-top: 10px;
+        padding: 5px 7px 5px 7px;
+        font-weight: lighter !important;
+        font-size: x-small !important;
+        position:absolute !important;
+        border-radius: 100% !important;
+        align-items: center;
+    }
+
+    ion-icon{
+        color: brown !important;
+        font-size: 35px !important;
+    }
+
+    ion-content{
+        background-color: rgb(253, 239, 220) !important;
+
+    
+         
+            ion-card{
+               
+                border-radius: 16px !important;
+                box-shadow: 5px 5px #acabaa !important;
+
+                img{
+                    object-fit: cover;
+                    width: 130px !important;
+                    height: 100px !important;
+                    align-items: center;
+                }
+
+                span{
+                    padding: 7px !important;
+                }
+            }
+
+            
+        
+    }
+
+    
+    
+}

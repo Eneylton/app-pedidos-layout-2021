@@ -1,0 +1,36 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-title>Produtos</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="onClick()">
+        <ion-icon slot="start" name="basket"></ion-icon>
+        <ion-badge color="primary">{{items.length}}</ion-badge>
+        
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list no-line [virtualScroll]="produtos">
+  
+    <ion-row>
+      <ion-col col-6 *virtualItem="let item">
+        <ion-card (click)="addItem(item)">
+          <ion-badge color="primary" [color]="item.status =='0' ? 'rose' : 'danger' ">
+            <ion-icon style="font-size: small !important;" name="checkmark"></ion-icon></ion-badge>
+          <img src="../..//assets/imgs/logo.png" alt="">
+          <ion-row>
+            <ion-col col-12> <span>{{item.nome}} {{item.status}}</span> <hr> </ion-col>
+            <ion-col col-8> <span> {{item.valor | currency: 'BRL'}}</span> </ion-col>
+            <ion-col col-4>  <span>{{item.qtd}}</span> </ion-col>
+          </ion-row>
+        </ion-card>
+       
+      </ion-col>
+    </ion-row>
+    
+  </ion-list>
+
+</ion-content>
